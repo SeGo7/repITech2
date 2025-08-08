@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IT‑Факультет — Образование будущего</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#f9f9ff;
+      --ink:#0f172a;
+      --muted:#616c7c;
+      --accent:#ff6b6b;
+      --accent-2:#2ec4b6;
+      --card:#fff;
+      --ring: rgba(15,23,42,.08);
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+    .layout{display:grid;grid-template-columns:260px 1fr;gap:24px;max-width:1300px;margin:auto;padding:20px}
+    @media(max-width:900px){.layout{grid-template-columns:1fr}}
+    .sidebar{position:sticky;top:20px;align-self:start}
+    .brand{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+    .brand-logo{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));}
+    .nav a{display:block;padding:10px 12px;margin-bottom:6px;border-radius:8px;text-decoration:none;color:var(--muted);transition:.3s}
+    .nav a.active,.nav a:hover{background:#fff;color:var(--ink);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+    .pill{display:inline-block;margin-top:10px;padding:6px 12px;border:1px solid var(--ring);border-radius:999px;text-decoration:none;color:var(--ink)}
+
+    main{display:flex;flex-direction:column;gap:28px}
+    .card{background:var(--card);padding:20px;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,.04);opacity:0;transform:translateY(20px);transition:.6s}
+    .card.show{opacity:1;transform:none}
+    .section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+    .section-title h2{font-size:22px;font-weight:800}
+    .tag{font-size:12px;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent-2));padding:4px 10px;border-radius:999px}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:center}
+    @media(max-width:900px){.hero{grid-template-columns:1fr}}
+    .hero h3{font:700 30px 'Playfair Display',serif;line-height:1.2}
+    .hero p{color:var(--muted)}
+    .hero-cta{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{padding:10px 16px;border-radius:10px;font-weight:700;text-decoration:none;transition:.3s;display:inline-block}
+    .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff}
+    .btn.ghost{background:#fff;border:1px solid var(--ring);color:var(--ink)}
+    .btn.full-accent{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;border:none}
+    .photo-wrap{display:grid;place-items:center;overflow:hidden;border-radius:16px;min-height:300px;background:#fff;animation:photoEnter 2s forwards}
+    @keyframes photoEnter{0%{transform:scale(2) translate(0,0);opacity:0}50%{transform:scale(1) translate(0,0);opacity:1}100%{transform:scale(1) translate(0,0);opacity:1}}
+    .photo{max-width:100%;height:auto;display:block}
+    .teacher-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+    .teacher-grid a{display:block;text-align:center}
+    .teacher-grid a img{width:100%;max-width:300px;height:300px;object-fit:cover;object-position:center;border-radius:12px;display:block;margin:0 auto 8px;background:#fff}
+    footer{text-align:center;margin:40px 0 10px;color:#6d7890;font-size:14px}
+  </style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-logo"></div><h1>IT‑Факультет</h1></div>
+    <nav class="nav" id="toc">
+      <a href="#hero" class="active">Главная</a>
+      <a href="#about">О факультете</a>
+      <a href="#teachers">Преподаватели</a>
+      <a href="#features">Как обучаем</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#join">Как начать</a>
+      <a href="#contact">Связь</a>
+    </nav>
+    <a class="pill" href="https://t.me/your_faculty_contact" target="_blank">Telegram</a>
+  </aside>
+  <main>
+    <section class="card hero" id="hero">
+      <div>
+        <div class="section-title"><h2>IT‑Факультет «Образование будущего»</h2><span class="tag">онлайн‑обучение</span></div>
+        <h3>Онлайн‑направление от команды опытных педагогов: готовим к ЕГЭ, ОГЭ и улучшаем школьные оценки с 5 по 11 класс.</h3>
+        <div class="hero-cta">
+          <a class="btn primary" href="#teachers">Познакомиться с преподавателями</a>
+          <a class="btn ghost" href="#contact">Связаться</a>
+        </div>
+      </div>
+      <div class="photo-wrap">
+        <img class="photo" src="repetitors.jpg" alt="Наша команда преподавателей"/>
+      </div>
+    </section>
+
+    <section class="card" id="about">
+      <div class="section-title"><h2>О факультете</h2></div>
+      <p>Мы — команда преподавателей с университетским образованием, многолетним опытом и авторскими методиками. Объединены идеей качественного и доступного онлайн‑обучения для школьников.</p>
+      <ul>
+        <li>🎯 Индивидуальный подход к каждому ученику</li>
+        <li>🧠 Акцент на понимание, а не заучивание</li>
+        <li>📈 Прозрачный прогресс: диагностика, отчёты, поддержка родителей</li>
+      </ul>
+    </section>
+
+    <section class="card" id="teachers">
+      <div class="section-title"><h2>Наши преподаватели</h2></div>
+      <div class="teacher-grid">
+        <a class="btn ghost" href="Irina/Irina.html"><img src="Irina/repetitor.png" alt="Ирина"/><strong>Ирина</strong><br/>Математика</a>
+        <a class="btn ghost" href="Sergey/Sergey.html"><img src="Sergey/repetitor.png" alt="Сергей"/><strong>Сергей</strong><br/>Информатика</a>
+        <a class="btn ghost" href="#"><strong>Вакансия открыта</strong><br/>Русский язык</a>
+        <a class="btn ghost" href="Svetlana/Svetlana.html"><img src="Svetlana/repetitor.png" alt="Светлана"/><strong>Светлана</strong><br/>Английский язык</a>
+      </div>
+    </section>
+
+    <section class="card" id="features">
+      <div class="section-title"><h2>Как мы обучаем</h2></div>
+      <ul>
+        <li>🖥️ Онлайн-занятия с интерактивной доской</li>
+        <li>📝 Индивидуальные планы и регулярный фидбек</li>
+        <li>📂 Все материалы — в общем доступе ученика</li>
+      </ul>
+    </section>
+
+    <section class="card" id="reviews">
+      <div class="section-title"><h2>Отзывы учеников</h2></div>
+      <details><summary>Анна (11 класс):</summary><p>Сдала ЕГЭ по математике на 88 баллов, хотя раньше еле на тройку тянула. Спасибо Ирине за терпение и поддержку!</p></details>
+      <details><summary>Алексей (9 класс):</summary><p>Очень крутая доска, как будто мы реально вместе решаем задачи. Преподаватель Дмитрий объясняет даже сложные темы просто.</p></details>
+    </section>
+
+    <section class="card" id="join">
+      <div class="section-title"><h2>Как начать обучение</h2></div>
+      <ol>
+        <li>🚀 Оставляете заявку (Telegram / форма)</li>
+        <li>🔍 Проводим бесплатную диагностику</li>
+        <li>📅 Назначаем первую встречу и стартуем</li>
+      </ol>
+    </section>
+
+    <section class="card" id="contact">
+      <div class="section-title"><h2>Связь</h2></div>
+      <p>📲 Напишите нам — подберём преподавателя под ваши цели!</p>
+      <a class="btn full-accent" href="https://t.me/your_faculty_contact" target="_blank">Написать в Telegram</a>
+    </section>
+  </main>
+</div>
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} })
+  },{threshold:.15});
+  document.querySelectorAll('.card').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

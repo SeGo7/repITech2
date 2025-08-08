@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Светлана — Преподаватель английского языка</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#f9f9ff;
+      --ink:#0f172a;
+      --muted:#616c7c;
+      --accent:#ff6b6b;
+      --accent-2:#2ec4b6;
+      --card:#fff;
+      --ring: rgba(15,23,42,.08);
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      font-family:'Manrope',sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.6;
+    }
+    .layout{display:grid;grid-template-columns:260px 1fr;gap:24px;max-width:1300px;margin:auto;padding:20px}
+    @media(max-width:900px){.layout{grid-template-columns:1fr}}
+    .sidebar{position:sticky;top:20px;align-self:start}
+    .brand{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+    .brand-logo{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));}
+    .nav a{display:block;padding:10px 12px;margin-bottom:6px;border-radius:8px;text-decoration:none;color:var(--muted);transition:.3s}
+    .nav a.active,.nav a:hover{background:#fff;color:var(--ink);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+    .pill{display:inline-block;margin-top:10px;padding:6px 12px;border:1px solid var(--ring);border-radius:999px;text-decoration:none;color:var(--ink)}
+
+    main{display:flex;flex-direction:column;gap:28px}
+    .card{background:var(--card);padding:20px;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,.04);opacity:0;transform:translateY(20px);transition:.6s}
+    .card.show{opacity:1;transform:none}
+    .section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+    .section-title h2{font-size:22px;font-weight:800}
+    .tag{font-size:12px;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent-2));padding:4px 10px;border-radius:999px}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:center}
+    @media(max-width:900px){.hero{grid-template-columns:1fr}}
+    .hero h3{font:700 36px 'Playfair Display',serif;line-height:1.2}
+    .hero p{color:var(--muted)}
+    .hero-cta{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{padding:10px 16px;border-radius:10px;font-weight:700;text-decoration:none;transition:.3s;display:inline-block}
+    .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff}
+    .btn.ghost{background:#fff;border:1px solid var(--ring);color:var(--ink)}
+    .btn.full-accent{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;border:none}
+    .photo-wrap{display:grid;place-items:center;overflow:hidden;border-radius:16px;min-height:300px;background:#fff;animation:photoEnter 2s forwards}
+    @keyframes photoEnter{0%{transform:scale(2) translate(0,0);opacity:0}50%{transform:scale(1) translate(0,0);opacity:1}100%{transform:scale(1) translate(0,0);opacity:1}}
+    .photo{max-width:100%;height:auto;display:block}
+    .slider{width:100%}
+    .price-display{font-weight:800;font-size:20px;margin-top:10px}
+    #contact .btn{margin-top:10px}
+  </style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-logo"></div><h1>Светлана</h1></div>
+    <nav class="nav" id="toc">
+      <a href="#hero" class="active">Главная</a>
+      <a href="#about">Обо мне</a>
+      <a href="#directions">Направления</a>
+      <a href="#includes">Что включают</a>
+      <a href="#benefits">Почему я</a>
+      <a href="#format">Формат</a>
+      <a href="#price">Стоимость</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <a class="pill" href="https://t.me/Laana_2" target="_blank">Telegram</a>
+    <a class="pill" href="https://vk.com/s.volgina2" target="_blank">VK</a>
+  </aside>
+  <main>
+    <section class="card hero" id="hero">
+      <div>
+        <div class="section-title"><h2>🇬🇧 Английский язык</h2><span class="tag">преподаватель</span></div>
+        <h3>Здравствуйте! Меня зовут Светлана</h3>
+        <p>Преподаватель английского языка. Окончила Лингвистический университет им. Н.А. Добролюбова (лингвистика, теория и методика преподавания иностранных языков и культур). Сейчас обучаюсь в магистратуре и работаю в Центре Одарённых Детей в Нижнем Новгороде.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#contact">Записаться</a>
+          <a class="btn ghost" href="#price">Узнать цену</a>
+        </div>
+      </div>
+      <div class="photo-wrap">
+        <img class="photo" src="repetitor.png" alt="Светлана"/>
+      </div>
+    </section>
+
+    <section class="card" id="about">
+      <div class="section-title"><h2>👩‍🏫 Обо мне</h2></div>
+      <p>Нижегородский государственный лингвистический университет имени Н.А. Добролюбова, 2024</p>
+    </section>
+
+    <section class="card" id="directions">
+      <div class="section-title"><h2>🎯 Направления подготовки</h2></div>
+      <ul>
+        <li>📚 Английский язык для детей и взрослых</li>
+      </ul>
+    </section>
+
+    <section class="card" id="includes">
+      <div class="section-title"><h2>📘 Что включают занятия</h2></div>
+      <ul>
+        <li>📕 Разговорная практика с первого урока</li>
+        <li>📗 Минимум теории, максимум практики</li>
+        <li>📙 Постановка произношения</li>
+        <li>📘 Индивидуальный подход к каждому ученику</li>
+      </ul>
+      <div style="margin-top:14px">
+        <div><strong>Этапы работы:</strong></div>
+        <ul>
+          <li>1. Знакомство и диагностика — определяем уровень, цели и предпочтения ученика</li>
+          <li>2. Подбор подходящей методики — коммуникативный подход и современные платформы</li>
+          <li>3. Живое общение — диалоги, игры и обсуждения для развития разговорных навыков</li>
+          <li>4. Обратная связь — регулярные отчёты о прогрессе и рекомендации</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="benefits">
+      <div class="section-title"><h2>⚡ Почему выбирают меня</h2></div>
+      <ul>
+        <li>✔ Коммуникативный подход и живое общение</li>
+        <li>✔ Минимум зазубривания — максимум практики</li>
+        <li>✔ Помощь в постановке правильного произношения</li>
+        <li>✔ Работаю как с детьми, так и со взрослыми</li>
+        <li>✔ Комфортная и дружелюбная атмосфера на уроках</li>
+        <li>✔ Объясняю понятно и увлекательно</li>
+        <li>✔ Гибкий график и индивидуальный подход</li>
+      </ul>
+    </section>
+
+    <section class="card" id="format">
+      <div class="section-title"><h2>🖥 Формат занятий</h2></div>
+      <p>☑️ Онлайн по видеосвязи + онлайн‑доска на любой платформе</p>
+    </section>
+
+    <section class="card" id="price">
+      <div class="section-title"><h2>💰 Стоимость</h2></div>
+      <input type="range" min="0" max="2" step="1" value="1" class="slider" id="priceSlider">
+      <div class="price-display" id="priceDisplay"></div>
+    </section>
+
+    <section class="card" id="education">
+      <div class="section-title"><h2>🎓 Образование</h2></div>
+      <p>Нижегородский государственный лингвистический университет имени Н.А. Добролюбова, 2024</p>
+    </section>
+
+    <section class="card" id="faq">
+      <div class="section-title"><h2>❓ Популярные вопросы</h2></div>
+      <details>
+        <summary>Сколько длится пробное занятие?</summary>
+        <p>Обычно 30–40 минут: знакомимся, определяем цели, проводим мини‑диагностику.</p>
+      </details>
+      <details>
+        <summary>Как проходят занятия онлайн?</summary>
+        <p>Видеосвязь + интерактивная доска (любой удобный сервис). Все материалы и домашние — в общую папку.</p>
+      </details>
+      <details>
+        <summary>Можно ли платить помесячно?</summary>
+        <p>Да, и поминутно тоже :) Удобный для вас формат обсудим на созвоне.</p>
+      </details>
+    </section>
+
+    <section class="card" id="contact">
+      <div class="section-title"><h2>📲 Связь</h2></div>
+      <p>📲 Отвечу на все вопросы — пишите!</p>
+      <a class="btn full-accent" href="https://t.me/Laana_2" target="_blank">Telegram</a>
+      <a class="btn full-accent" href="https://vk.com/s.volgina2" target="_blank">ВКонтакте</a>
+    </section>
+  </main>
+</div>
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} })
+  },{threshold:.15});
+  document.querySelectorAll('.card').forEach(el=>io.observe(el));
+
+  const slider=document.getElementById('priceSlider');
+  const display=document.getElementById('priceDisplay');
+  const labels=['45 минут','1 час','1,5 часа'];
+  const values=[1100,1400,1900];
+  slider.addEventListener('input',()=>{
+    const i=parseInt(slider.value,10);
+    display.textContent=`${labels[i]} — ${values[i]} ₽`;
+  });
+  slider.dispatchEvent(new Event('input'));
+</script>
+</body>
+</html>
